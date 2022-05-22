@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.MainActivityProfile">
+
+    <!--Input-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="18pt"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"/>
+    <TextView
+        android:id="@+id/tvNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Penerima :"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_marginLeft="14dp"
+        android:layout_below="@id/title"/>
+    <EditText
+        android:id="@+id/etNama"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="14dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNama"
+        />
+
+    <TextView
+        android:id="@+id/tvAlamat"
+        android:layout_marginLeft="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alamat Penerima : "
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_below="@id/etNama"/>
+    <EditText
+        android:id="@+id/etAlamat"
+        android:layout_marginLeft="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAlamat"
+        />
+    <TextView
+        android:id="@+id/tvTelpon"
+        android:layout_marginLeft="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Telpon : "
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_below="@id/etAlamat"/>
+    <EditText
+        android:id="@+id/etTelpon"
+        android:layout_marginLeft="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTelpon"
+        />
+    <TextView
+        android:id="@+id/tvOngkir"
+        android:layout_marginLeft="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biaya Kirim : "
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_below="@id/etTelpon"/>
+    <EditText
+        android:id="@+id/etOngkir"
+        android:layout_marginLeft="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvOngkir"
+        />
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etOngkir"
+        android:text="Submit"
+        />
+
+    <!--Output-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_main"
+        android:layout_margin="5dp"
+        android:background="@color/cardview_shadow_end_color"
+        android:layout_below="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_profile">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
